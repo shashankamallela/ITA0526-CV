@@ -1,0 +1,12 @@
+img = cv2.imread("input.jpg")
+rows, cols = img.shape[:2]
+
+pts1 = np.float32([[0,0],[cols,0],[0,rows],[cols,rows]])
+pts2 = np.float32([[50,50],[cols-50,30],[50,rows-50],[cols-50,rows-30]])
+
+matrix = cv2.getPerspectiveTransform(pts1, pts2)
+perspective = cv2.warpPerspective(img, matrix, (cols, rows))
+
+cv2.imshow("Perspective", perspective)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
