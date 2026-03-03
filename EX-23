@@ -1,0 +1,4 @@
+tophat = cv2.morphologyEx(img, cv2.MORPH_TOPHAT, kernel)
+cv2.imshow("TopHat", tophat)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
