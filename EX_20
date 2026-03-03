@@ -1,0 +1,6 @@
+
+
+dilation = cv2.morphologyEx(img, cv2.MORPH_DILATE, kernel)
+cv2.imshow("Morph Dilation", dilation)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
