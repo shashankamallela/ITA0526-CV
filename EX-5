@@ -1,0 +1,9 @@
+def analyze_histogram(image_path):
+    img = cv2.imread(image_path)
+    colors = ('b','g','r')
+
+    for i, col in enumerate(colors):
+        hist = cv2.calcHist([img], [i], None, [256], [0,256])
+        print(f"{col} channel histogram sum:", hist.sum())
+
+analyze_histogram("input.jpg")
