@@ -1,0 +1,8 @@
+img = cv2.imread("input.jpg")
+
+roi = img[100:200, 100:200]
+img[300:400, 300:400] = roi
+
+cv2.imshow("ROI Paste", img)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
