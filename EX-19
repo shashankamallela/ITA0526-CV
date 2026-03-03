@@ -1,0 +1,8 @@
+img = cv2.imread("input.jpg", 0)
+kernel = np.ones((5,5), np.uint8)
+
+erosion = cv2.morphologyEx(img, cv2.MORPH_ERODE, kernel)
+
+cv2.imshow("Morph Erosion", erosion)
+cv2.waitKey(0)
+cv2.destroyAllWindows()
